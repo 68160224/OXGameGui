@@ -1,0 +1,96 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package loop.oxgamegui;
+
+/**
+ *
+ * @author Windows
+ */
+public class Board {
+
+    private char[][] table = {{'-', '-', '-'},
+    {'-', '-', '-'},
+    {'-', '-', '-'}};
+    private Player currentPlayer;
+    private Player o, x;
+
+    public Board(Player o, Player x) {
+        this.o = o;
+        this.x = x;
+        this.currentPlayer = o;
+    }
+
+    public char[][] getTable() {
+        return table;
+    }
+
+    public void setRowCol(int row, int col) {
+        this.table[row - 1][col - 1] = currentPlayer.getName();
+    }
+
+    public Player getCurrentPlayer() {
+        return currentPlayer;
+    }
+
+    public void switchPlayer() {
+        if (this.currentPlayer == o) {
+            this.currentPlayer = x;
+        } else {
+            this.currentPlayer = o;
+        }
+    }
+
+    public boolean checkWin() {
+        char[][] table = getTable();
+        for (int fix = 0; fix < table.length; fix++) {
+            int horizontal = 0;
+            int vertical = 0;
+            int diagonal = 0;
+            int reverseDiagonal = 0;
+            for (int move = 0; move < table.length; move++) {
+                if (table[fix][move] == currentPlayer.getName()) {
+                    horizontal++;
+                }
+                if (table[move][fix] == currentPlayer.getName()) {
+                    vertical++;
+                }
+                if (table[move][move] == currentPlayer.getName()) {
+                    diagonal++;
+                }
+                if (table[move][2 - move] == currentPlayer.getName()) {
+                    reverseDiagonal++;
+                }
+            }
+            if ((horizontal == 3) || (vertical == 3) || (diagonal == 3) || (reverseDiagonal == 3)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean checkRowCol(int row, int col) {
+        if (table[row - 1][col - 1] == '-') {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public void updateScore() {
+        if (checkWin() == true) {
+            if (currentPlayer == o) {
+                o.setWin(o.getWin() + 1);
+                x.setLose(x.getLose() + 1);
+            } else {
+                x.setWin(x.getWin() + 1);
+                o.setLose(o.getLose() + 1);
+            }
+        } else {
+            o.setDraw(o.getDraw() + 1);
+            x.setDraw(x.getDraw() + 1);
+        }
+
+    }
+}
