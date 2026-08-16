@@ -424,57 +424,39 @@ public class OXFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
-        int row = 1;
-        int col = 1;
-        setRowColInBtn(row, col);
+        setRowColInBtn(1, 1);
     }//GEN-LAST:event_btn1ActionPerformed
 
     private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
-        int row = 1;
-        int col = 2;
-        setRowColInBtn(row, col);
+        setRowColInBtn(1, 2);
     }//GEN-LAST:event_btn2ActionPerformed
 
     private void btn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3ActionPerformed
-        int row = 1;
-        int col = 3;
-        setRowColInBtn(row, col);
+        setRowColInBtn(1, 3);
     }//GEN-LAST:event_btn3ActionPerformed
 
     private void btn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn4ActionPerformed
-        int row = 2;
-        int col = 1;
-        setRowColInBtn(row, col);
+        setRowColInBtn(2, 1);
     }//GEN-LAST:event_btn4ActionPerformed
 
     private void btn5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn5ActionPerformed
-        int row = 2;
-        int col = 2;
-        setRowColInBtn(row, col);
+        setRowColInBtn(2, 2);
     }//GEN-LAST:event_btn5ActionPerformed
 
     private void btn6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn6ActionPerformed
-        int row = 2;
-        int col = 3;
-        setRowColInBtn(row, col);
+        setRowColInBtn(2, 3);
     }//GEN-LAST:event_btn6ActionPerformed
 
     private void btn7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn7ActionPerformed
-        int row = 3;
-        int col = 1;
-        setRowColInBtn(row, col);
+        setRowColInBtn(3, 1);
     }//GEN-LAST:event_btn7ActionPerformed
 
     private void btn8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn8ActionPerformed
-        int row = 3;
-        int col = 2;
-        setRowColInBtn(row, col);
+        setRowColInBtn(3, 2);
     }//GEN-LAST:event_btn8ActionPerformed
 
     private void btn9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn9ActionPerformed
-        int row = 3;
-        int col = 3;
-        setRowColInBtn(row, col);
+        setRowColInBtn(3, 3);
     }//GEN-LAST:event_btn9ActionPerformed
 
     private void showBoard() {
