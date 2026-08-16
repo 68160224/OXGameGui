@@ -489,6 +489,10 @@ public class OXFrame extends javax.swing.JFrame {
         btn8.setText("" + table[2][1]);
         btn9.setText("" + table[2][2]);
     }
+    
+    private void showTurn() {
+        lblStatus.setText("Turn " + board.getCurrentPlayer().getName());
+    }
 
     /**
      * @param args the command line arguments
