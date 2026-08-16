@@ -11,12 +11,19 @@ package loop.oxgamegui;
 public class OXFrame extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(OXFrame.class.getName());
+    private final Player o;
+    private final Player x;
+    private final Board board;   
 
     /**
      * Creates new form OXFrame
      */
     public OXFrame() {
         initComponents();
+        o = new Player('O');
+        x = new Player('X');
+        board = new Board(o, x);
+        showBoard();
     }
 
     /**
@@ -55,6 +62,11 @@ public class OXFrame extends javax.swing.JFrame {
         nWinO = new javax.swing.JLabel();
         nLosseO = new javax.swing.JLabel();
         DrawLoseO = new javax.swing.JLabel();
+        jPanel5 = new javax.swing.JPanel();
+        jPanel6 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -62,30 +74,39 @@ public class OXFrame extends javax.swing.JFrame {
 
         btn1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         btn1.setText("-");
+        btn1.addActionListener(this::btn1ActionPerformed);
 
         btn2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         btn2.setText("-");
+        btn2.addActionListener(this::btn2ActionPerformed);
 
         btn3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         btn3.setText("-");
+        btn3.addActionListener(this::btn3ActionPerformed);
 
         btn4.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         btn4.setText("-");
+        btn4.addActionListener(this::btn4ActionPerformed);
 
         btn5.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         btn5.setText("-");
+        btn5.addActionListener(this::btn5ActionPerformed);
 
         btn6.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         btn6.setText("-");
+        btn6.addActionListener(this::btn6ActionPerformed);
 
         btn7.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         btn7.setText("-");
+        btn7.addActionListener(this::btn7ActionPerformed);
 
         btn8.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         btn8.setText("-");
+        btn8.addActionListener(this::btn8ActionPerformed);
 
         btn9.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         btn9.setText("-");
+        btn9.addActionListener(this::btn9ActionPerformed);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -135,7 +156,7 @@ public class OXFrame extends javax.swing.JFrame {
                 .addGap(9, 9, 9))
         );
 
-        jPanel2.setBackground(new java.awt.Color(204, 153, 255));
+        jPanel2.setBackground(new java.awt.Color(255, 153, 255));
         jPanel2.setPreferredSize(new java.awt.Dimension(174, 174));
 
         PlayerX.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -309,16 +330,75 @@ public class OXFrame extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanel5.setBackground(new java.awt.Color(153, 204, 255));
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel2.setText("Welcome to OX Game!");
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel2)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jButton1.setText("New Game");
+        jButton1.addActionListener(this::jButton1ActionPerformed);
+
+        jButton2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jButton2.setText("Exit");
+        jButton2.addActionListener(this::jButton2ActionPerformed);
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 168, Short.MAX_VALUE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addComponent(jButton1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -327,12 +407,88 @@ public class OXFrame extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(116, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
+        board.setRowCol(1, 1);
+        showBoard();
+        board.switchPlayer();
+    }//GEN-LAST:event_btn1ActionPerformed
+
+    private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
+        board.setRowCol(1, 2);
+        showBoard();
+        board.switchPlayer();
+    }//GEN-LAST:event_btn2ActionPerformed
+
+    private void btn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3ActionPerformed
+        board.setRowCol(1, 3);
+        showBoard();
+        board.switchPlayer();
+    }//GEN-LAST:event_btn3ActionPerformed
+
+    private void btn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn4ActionPerformed
+        board.setRowCol(2, 1);
+        showBoard();
+        board.switchPlayer();
+    }//GEN-LAST:event_btn4ActionPerformed
+
+    private void btn5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn5ActionPerformed
+        board.setRowCol(2, 2);
+        showBoard();
+        board.switchPlayer();
+    }//GEN-LAST:event_btn5ActionPerformed
+
+    private void btn6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn6ActionPerformed
+        board.setRowCol(2, 3);
+        showBoard();
+        board.switchPlayer();
+    }//GEN-LAST:event_btn6ActionPerformed
+
+    private void btn7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn7ActionPerformed
+        board.setRowCol(3, 1);
+        showBoard();
+        board.switchPlayer();
+    }//GEN-LAST:event_btn7ActionPerformed
+
+    private void btn8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn8ActionPerformed
+        board.setRowCol(3, 2);
+        showBoard();
+        board.switchPlayer();
+    }//GEN-LAST:event_btn8ActionPerformed
+
+    private void btn9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn9ActionPerformed
+        board.setRowCol(3, 3);
+        showBoard();
+        board.switchPlayer();
+    }//GEN-LAST:event_btn9ActionPerformed
+    
+    private void showBoard() {
+        char[][] table = board.getTable();
+        btn1.setText("" + table[0][0]);
+        btn2.setText("" + table[0][1]);
+        btn3.setText("" + table[0][2]);
+        btn4.setText("" + table[1][0]);
+        btn5.setText("" + table[1][1]);
+        btn6.setText("" + table[1][2]);
+        btn7.setText("" + table[2][0]);
+        btn8.setText("" + table[2][1]);
+        btn9.setText("" + table[2][2]);
+    }
     /**
      * @param args the command line arguments
      */
@@ -373,10 +529,15 @@ public class OXFrame extends javax.swing.JFrame {
     private javax.swing.JButton btn9;
     private javax.swing.JLabel drawO;
     private javax.swing.JLabel drawX;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
     private javax.swing.JLabel loseO;
     private javax.swing.JLabel loseX;
     private javax.swing.JLabel nDrawX;
