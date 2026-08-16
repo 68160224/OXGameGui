@@ -9,11 +9,11 @@ package loop.oxgamegui;
  * @author Windows
  */
 public class OXFrame extends javax.swing.JFrame {
-    
+
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(OXFrame.class.getName());
     private final Player o;
     private final Player x;
-    private final Board board;   
+    private final Board board;
 
     /**
      * Creates new form OXFrame
@@ -424,41 +424,59 @@ public class OXFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
-       
+        board.setRowCol(1, 1);
+        showBoard();
+        board.switchPlayer();
     }//GEN-LAST:event_btn1ActionPerformed
 
     private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
-
+        board.setRowCol(1, 2);
+        showBoard();
+        board.switchPlayer();
     }//GEN-LAST:event_btn2ActionPerformed
 
     private void btn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3ActionPerformed
-
+        board.setRowCol(1, 3);
+        showBoard();
+        board.switchPlayer();
     }//GEN-LAST:event_btn3ActionPerformed
 
     private void btn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn4ActionPerformed
-
+        board.setRowCol(2, 1);
+        showBoard();
+        board.switchPlayer();
     }//GEN-LAST:event_btn4ActionPerformed
 
     private void btn5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn5ActionPerformed
-
+        board.setRowCol(2, 2);
+        showBoard();
+        board.switchPlayer();
     }//GEN-LAST:event_btn5ActionPerformed
 
     private void btn6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn6ActionPerformed
-  
+        board.setRowCol(2, 3);
+        showBoard();
+        board.switchPlayer();
     }//GEN-LAST:event_btn6ActionPerformed
 
     private void btn7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn7ActionPerformed
-       
+        board.setRowCol(3, 1);
+        showBoard();
+        board.switchPlayer();
     }//GEN-LAST:event_btn7ActionPerformed
 
     private void btn8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn8ActionPerformed
-
+        board.setRowCol(3, 2);
+        showBoard();
+        board.switchPlayer();
     }//GEN-LAST:event_btn8ActionPerformed
 
     private void btn9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn9ActionPerformed
-
+        board.setRowCol(3, 3);
+        showBoard();
+        board.switchPlayer();
     }//GEN-LAST:event_btn9ActionPerformed
-    
+
     private void showBoard() {
         char[][] table = board.getTable();
         btn1.setText("" + table[0][0]);
@@ -471,7 +489,7 @@ public class OXFrame extends javax.swing.JFrame {
         btn8.setText("" + table[2][1]);
         btn9.setText("" + table[2][2]);
     }
-    
+
     /**
      * @param args the command line arguments
      */
