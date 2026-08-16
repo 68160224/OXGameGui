@@ -424,9 +424,9 @@ public class OXFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
-        board.setRowCol(1, 1);
-        showBoard();
-        board.switchPlayer();
+        int row = 1;
+        int col = 2;
+        setRowColInBtn(row, col);
     }//GEN-LAST:event_btn1ActionPerformed
 
     private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
@@ -493,6 +493,15 @@ public class OXFrame extends javax.swing.JFrame {
     private void showTurn() {
         lblStatus.setText("Turn " + board.getCurrentPlayer().getName());
     }
+    
+    
+    private void setRowColInBtn(int row, int col) {
+        board.setRowCol(row, col);
+        showBoard();
+        board.switchPlayer();
+        showTurn();
+    }
+
 
     /**
      * @param args the command line arguments
