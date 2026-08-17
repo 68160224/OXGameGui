@@ -36,24 +36,24 @@ public class Player {
         return win;
     }
 
-    public void setWin(int win) {
-        this.win = win;
+    public void win() {
+        win++;
     }
 
     public int getLose() {
         return lose;
     }
 
-    public void setLose(int lose) {
-        this.lose = lose;
+    public void lose() {
+        lose++;
     }
 
     public int getDraw() {
         return draw;
     }
 
-    public void setDraw(int draw) {
-        this.draw = draw;
+    public void draw() {
+        draw++;
     }
 
     @Override

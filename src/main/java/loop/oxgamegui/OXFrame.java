@@ -28,7 +28,7 @@ public class OXFrame extends javax.swing.JFrame {
     private void newGame() {
         board = new Board(o, x);
         showBoard();
-        setEnabled(true);
+        setEnableBoard(true);
         lblStatus.setText("Welcome to OX Game!!!");
     }
     
@@ -410,7 +410,7 @@ public class OXFrame extends javax.swing.JFrame {
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(17, 17, 17)
                 .addComponent(lblStatus)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
