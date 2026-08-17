@@ -64,7 +64,8 @@ public class OXFrame extends javax.swing.JFrame {
         }else {
             board.switchPlayer();
             showTurn();
-        } 
+        }
+        board.updateScore();
     }
     
     private void showWin(){

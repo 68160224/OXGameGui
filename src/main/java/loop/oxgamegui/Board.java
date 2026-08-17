@@ -90,17 +90,17 @@ public class Board {
     }
 
     public void updateScore() {
-        if (checkWin() == true) {
+        if (checkWin()) {
             if (currentPlayer == o) {
-                o.setWin(o.getWin() + 1);
-                x.setLose(x.getLose() + 1);
+                o.win();
+                x.lose();
             } else {
-                x.setWin(x.getWin() + 1);
-                o.setLose(o.getLose() + 1);
+                x.win();
+                o.lose();
             }
-        } else {
-            o.setDraw(o.getDraw() + 1);
-            x.setDraw(x.getDraw() + 1);
+        } else if (checkDraw()) {
+            o.draw();
+            x.draw();
         }
 
     }
