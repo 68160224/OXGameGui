@@ -59,13 +59,14 @@ public class OXFrame extends javax.swing.JFrame {
         showBoard();
         if (board.checkWin()) {
             showWin();
+            board.updateWin();
         } else if (board.checkDraw()) {
             showDraw();
+            board.updateDraw();
         }else {
             board.switchPlayer();
             showTurn();
         }
-        board.updateScore();
         showScore();
     }
     
@@ -95,9 +96,9 @@ public class OXFrame extends javax.swing.JFrame {
         lblXWin.setText("" + x.getWin());
         lblXLose.setText("" + x.getLose());
         lblXDraw.setText("" + x.getDraw());
-        lblOWin.setText("" + x.getWin());
-        lblOLose.setText("" + x.getLose());
-        lblODraw.setText("" + x.getDraw());
+        lblOWin.setText("" + o.getWin());
+        lblOLose.setText("" + o.getLose());
+        lblODraw.setText("" + o.getDraw());
     }
     
     /**

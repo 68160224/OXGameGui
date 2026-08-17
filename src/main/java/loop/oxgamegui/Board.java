@@ -27,7 +27,7 @@ public class Board {
     }
 
     public void setRowCol(int row, int col) {
-        if (table[row - 1][col - 1] == '-'){
+        if (table[row - 1][col - 1] == '-') {
             this.table[row - 1][col - 1] = currentPlayer.getName();
         } else {
             throw new IllegalStateException("Spot taken");
@@ -72,12 +72,12 @@ public class Board {
         }
         return false;
     }
-    
+
     public boolean checkDraw() {
         int n = 0;
         for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3;j++) {
-                if (table[i][j] != '-'){
+            for (int j = 0; j < 3; j++) {
+                if (table[i][j] != '-') {
                     n++;
                 }
             }
@@ -89,18 +89,18 @@ public class Board {
         }
     }
 
-    public void updateScore() {
-        if (checkWin()) {
-            if (currentPlayer == o) {
-                o.win();
-                x.lose();
-            } else {
-                x.win();
-                o.lose();
-            }
-        } else if (checkDraw()) {
-            o.draw();
-            x.draw();
+    public void updateWin() {
+        if (currentPlayer == o) {
+            o.win();
+            x.lose();
+        } else {
+            x.win();
+            o.lose();
         }
+    }
+
+    public void updateDraw() {
+        o.draw();
+        x.draw();
     }
 }
