@@ -66,6 +66,7 @@ public class OXFrame extends javax.swing.JFrame {
             showTurn();
         }
         board.updateScore();
+        showScore();
     }
     
     private void showWin(){
@@ -88,6 +89,15 @@ public class OXFrame extends javax.swing.JFrame {
         btn7.setEnabled(isEnable);
         btn8.setEnabled(isEnable);
         btn9.setEnabled(isEnable);
+    }
+    
+    private void showScore() {
+        lblXWin.setText("" + x.getWin());
+        lblXLose.setText("" + x.getLose());
+        lblXDraw.setText("" + x.getDraw());
+        lblOWin.setText("" + x.getWin());
+        lblOLose.setText("" + x.getLose());
+        lblODraw.setText("" + x.getDraw());
     }
     
     /**
