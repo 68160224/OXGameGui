@@ -11,9 +11,9 @@ package loop.oxgamegui;
 public class OXFrame extends javax.swing.JFrame {
 
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(OXFrame.class.getName());
-    private final Player o;
-    private final Player x;
-    private final Board board;
+    private Player o;
+    private Player x;
+    private Board board;
 
     /**
      * Creates new form OXFrame
@@ -22,10 +22,73 @@ public class OXFrame extends javax.swing.JFrame {
         initComponents();
         o = new Player('O');
         x = new Player('X');
-        board = new Board(o, x);
-        showBoard();
+        newGame();
     }
 
+    private void newGame() {
+        board = new Board(o, x);
+        showBoard();
+        showTurn();
+        setEnabled(true);
+    }
+    
+    private void showBoard() {
+        char[][] table = board.getTable();
+        btn1.setText("" + table[0][0]);
+        btn2.setText("" + table[0][1]);
+        btn3.setText("" + table[0][2]);
+        btn4.setText("" + table[1][0]);
+        btn5.setText("" + table[1][1]);
+        btn6.setText("" + table[1][2]);
+        btn7.setText("" + table[2][0]);
+        btn8.setText("" + table[2][1]);
+        btn9.setText("" + table[2][2]);
+    }
+    
+    private void showTurn() {
+        lblStatus.setText("Turn " + board.getCurrentPlayer().getName());
+    }
+    
+    
+    private void play(int row, int col) {
+        try {
+            board.setRowCol(row, col);
+        } catch (IllegalStateException ex) {
+            return;
+        }        
+        showBoard();
+        if (board.checkWin()) {
+            showWin();
+        } else if (board.checkDraw()) {
+            showDraw();
+        }else {
+            board.switchPlayer();
+            showTurn();
+        } 
+    }
+    
+    private void showWin(){
+        lblStatus.setText(board.getCurrentPlayer().getName() + " Win!!!");
+        setEnableBoard(false);
+    }
+    
+    private void showDraw() {
+        lblStatus.setText("Draw!");
+        setEnableBoard(false);
+    }
+    
+    private void setEnableBoard(boolean isEnable) {
+        btn1.setEnabled(isEnable);
+        btn2.setEnabled(isEnable);
+        btn3.setEnabled(isEnable);
+        btn4.setEnabled(isEnable);
+        btn5.setEnabled(isEnable);
+        btn6.setEnabled(isEnable);
+        btn7.setEnabled(isEnable);
+        btn8.setEnabled(isEnable);
+        btn9.setEnabled(isEnable);
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -459,62 +522,7 @@ public class OXFrame extends javax.swing.JFrame {
         play(3, 3);
     }//GEN-LAST:event_btn9ActionPerformed
 
-    private void showBoard() {
-        char[][] table = board.getTable();
-        btn1.setText("" + table[0][0]);
-        btn2.setText("" + table[0][1]);
-        btn3.setText("" + table[0][2]);
-        btn4.setText("" + table[1][0]);
-        btn5.setText("" + table[1][1]);
-        btn6.setText("" + table[1][2]);
-        btn7.setText("" + table[2][0]);
-        btn8.setText("" + table[2][1]);
-        btn9.setText("" + table[2][2]);
-    }
     
-    private void showTurn() {
-        lblStatus.setText("Turn " + board.getCurrentPlayer().getName());
-    }
-    
-    
-    private void play(int row, int col) {
-        try {
-            board.setRowCol(row, col);
-        } catch (IllegalStateException ex) {
-            return;
-        }        
-        showBoard();
-        if (board.checkWin()) {
-            showWin();
-        } else if (board.checkDraw()) {
-            showDraw();
-        }else {
-            board.switchPlayer();
-            showTurn();
-        } 
-    }
-    
-    private void showWin(){
-        lblStatus.setText(board.getCurrentPlayer().getName() + " Win!!!");
-        setEnableBoard(false);
-    }
-    
-    private void showDraw() {
-        lblStatus.setText("Draw!");
-        setEnableBoard(false);
-    }
-    
-    private void setEnableBoard(boolean isEnable) {
-        btn1.setEnabled(isEnable);
-        btn2.setEnabled(isEnable);
-        btn3.setEnabled(isEnable);
-        btn4.setEnabled(isEnable);
-        btn5.setEnabled(isEnable);
-        btn6.setEnabled(isEnable);
-        btn7.setEnabled(isEnable);
-        btn8.setEnabled(isEnable);
-        btn9.setEnabled(isEnable);
-    }
 
     /**
      * @param args the command line arguments
