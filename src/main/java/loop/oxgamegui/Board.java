@@ -27,7 +27,7 @@ public class Board {
     }
 
     public boolean setRowCol(int row, int col) {
-        if (checkRowCol(row, col)){
+        if (table[row - 1][col - 1] == '-'){
             this.table[row - 1][col - 1] = currentPlayer.getName();
             return true;
         } else {
@@ -49,7 +49,6 @@ public class Board {
     }
 
     public boolean checkWin() {
-        char[][] table = getTable();
         for (int fix = 0; fix < table.length; fix++) {
             int horizontal = 0;
             int vertical = 0;
@@ -86,14 +85,6 @@ public class Board {
             }
         }
         if (n == 9 && !checkWin()) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    public boolean checkRowCol(int row, int col) {
-        if (table[row - 1][col - 1] == '-') {
             return true;
         } else {
             return false;
