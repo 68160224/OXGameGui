@@ -28,8 +28,8 @@ public class OXFrame extends javax.swing.JFrame {
     private void newGame() {
         board = new Board(o, x);
         showBoard();
-        showTurn();
         setEnabled(true);
+        lblStatus.setText("Welcome to OX Game!!!");
     }
     
     private void showBoard() {
@@ -479,7 +479,7 @@ public class OXFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnNewGameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNewGameActionPerformed
-        // TODO add your handling code here:
+        newGame();
     }//GEN-LAST:event_btnNewGameActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
