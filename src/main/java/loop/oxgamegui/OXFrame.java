@@ -478,7 +478,12 @@ public class OXFrame extends javax.swing.JFrame {
     
     
     private void play(int row, int col) {
-        board.setRowCol(row, col);
+        try {
+            board.setRowCol(row, col);
+        } catch (Exception ex) {
+            return;
+        }
+        
         showBoard();
         if (board.checkWin()) {
             showWin();

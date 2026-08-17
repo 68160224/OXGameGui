@@ -26,12 +26,11 @@ public class Board {
         return table;
     }
 
-    public boolean setRowCol(int row, int col) {
+    public void setRowCol(int row, int col) {
         if (table[row - 1][col - 1] == '-'){
             this.table[row - 1][col - 1] = currentPlayer.getName();
-            return true;
         } else {
-            return false;
+            throw new IllegalStateException("Spot taken");
         }
         
     }
