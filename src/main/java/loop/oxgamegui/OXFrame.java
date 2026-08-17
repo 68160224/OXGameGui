@@ -424,39 +424,39 @@ public class OXFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
-        setRowColInBtn(1, 1);
+        play(1, 1);
     }//GEN-LAST:event_btn1ActionPerformed
 
     private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
-        setRowColInBtn(1, 2);
+        play(1, 2);
     }//GEN-LAST:event_btn2ActionPerformed
 
     private void btn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3ActionPerformed
-        setRowColInBtn(1, 3);
+        play(1, 3);
     }//GEN-LAST:event_btn3ActionPerformed
 
     private void btn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn4ActionPerformed
-        setRowColInBtn(2, 1);
+        play(2, 1);
     }//GEN-LAST:event_btn4ActionPerformed
 
     private void btn5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn5ActionPerformed
-        setRowColInBtn(2, 2);
+        play(2, 2);
     }//GEN-LAST:event_btn5ActionPerformed
 
     private void btn6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn6ActionPerformed
-        setRowColInBtn(2, 3);
+        play(2, 3);
     }//GEN-LAST:event_btn6ActionPerformed
 
     private void btn7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn7ActionPerformed
-        setRowColInBtn(3, 1);
+        play(3, 1);
     }//GEN-LAST:event_btn7ActionPerformed
 
     private void btn8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn8ActionPerformed
-        setRowColInBtn(3, 2);
+        play(3, 2);
     }//GEN-LAST:event_btn8ActionPerformed
 
     private void btn9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn9ActionPerformed
-        setRowColInBtn(3, 3);
+        play(3, 3);
     }//GEN-LAST:event_btn9ActionPerformed
 
     private void showBoard() {
@@ -477,11 +477,19 @@ public class OXFrame extends javax.swing.JFrame {
     }
     
     
-    private void setRowColInBtn(int row, int col) {
+    private void play(int row, int col) {
         board.setRowCol(row, col);
         showBoard();
-        board.switchPlayer();
-        showTurn();
+        if (board.checkWin()) {
+            showWin();
+        } else {
+            board.switchPlayer();
+            showTurn();
+        } 
+    }
+    
+    private void showWin(){
+        lblStatus.setText(board.getCurrentPlayer().getName() + " Win!!!");
     }
 
 
