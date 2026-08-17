@@ -115,17 +115,17 @@ public class OXFrame extends javax.swing.JFrame {
         winX = new javax.swing.JLabel();
         loseX = new javax.swing.JLabel();
         drawX = new javax.swing.JLabel();
-        nWinX = new javax.swing.JLabel();
-        nLoseX = new javax.swing.JLabel();
-        nDrawX = new javax.swing.JLabel();
+        lblXWin = new javax.swing.JLabel();
+        lblXLose = new javax.swing.JLabel();
+        lblXDraw = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         PlayerO = new javax.swing.JLabel();
         winO = new javax.swing.JLabel();
         loseO = new javax.swing.JLabel();
         drawO = new javax.swing.JLabel();
-        nWinO = new javax.swing.JLabel();
-        nLosseO = new javax.swing.JLabel();
-        DrawLoseO = new javax.swing.JLabel();
+        lblOWin = new javax.swing.JLabel();
+        lblOLose = new javax.swing.JLabel();
+        lblODraw = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
         lblStatus = new javax.swing.JLabel();
@@ -242,20 +242,20 @@ public class OXFrame extends javax.swing.JFrame {
         drawX.setText("Draw:");
         drawX.setPreferredSize(new java.awt.Dimension(75, 20));
 
-        nWinX.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        nWinX.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        nWinX.setText("0");
-        nWinX.setPreferredSize(new java.awt.Dimension(75, 20));
+        lblXWin.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblXWin.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblXWin.setText("0");
+        lblXWin.setPreferredSize(new java.awt.Dimension(75, 20));
 
-        nLoseX.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        nLoseX.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        nLoseX.setText("0");
-        nLoseX.setPreferredSize(new java.awt.Dimension(75, 20));
+        lblXLose.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblXLose.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblXLose.setText("0");
+        lblXLose.setPreferredSize(new java.awt.Dimension(75, 20));
 
-        nDrawX.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        nDrawX.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        nDrawX.setText("0");
-        nDrawX.setPreferredSize(new java.awt.Dimension(75, 20));
+        lblXDraw.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblXDraw.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblXDraw.setText("0");
+        lblXDraw.setPreferredSize(new java.awt.Dimension(75, 20));
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -272,9 +272,9 @@ public class OXFrame extends javax.swing.JFrame {
                             .addComponent(loseX, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(nWinX, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(nLoseX, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(nDrawX, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addComponent(lblXWin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblXLose, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblXDraw, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -290,11 +290,11 @@ public class OXFrame extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(drawX, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(nWinX, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblXWin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(nLoseX, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblXLose, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(nDrawX, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(lblXDraw, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -317,20 +317,20 @@ public class OXFrame extends javax.swing.JFrame {
         drawO.setText("Draw:");
         drawO.setPreferredSize(new java.awt.Dimension(75, 20));
 
-        nWinO.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        nWinO.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        nWinO.setText("0");
-        nWinO.setPreferredSize(new java.awt.Dimension(75, 20));
+        lblOWin.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblOWin.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblOWin.setText("0");
+        lblOWin.setPreferredSize(new java.awt.Dimension(75, 20));
 
-        nLosseO.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        nLosseO.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        nLosseO.setText("0");
-        nLosseO.setPreferredSize(new java.awt.Dimension(75, 20));
+        lblOLose.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblOLose.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblOLose.setText("0");
+        lblOLose.setPreferredSize(new java.awt.Dimension(75, 20));
 
-        DrawLoseO.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        DrawLoseO.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        DrawLoseO.setText("0");
-        DrawLoseO.setPreferredSize(new java.awt.Dimension(75, 20));
+        lblODraw.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblODraw.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblODraw.setText("0");
+        lblODraw.setPreferredSize(new java.awt.Dimension(75, 20));
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -347,9 +347,9 @@ public class OXFrame extends javax.swing.JFrame {
                             .addComponent(loseO, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(nWinO, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(nLosseO, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(DrawLoseO, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addComponent(lblOWin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblOLose, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblODraw, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -365,11 +365,11 @@ public class OXFrame extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(drawO, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(nWinO, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblOWin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(nLosseO, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblOLose, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(DrawLoseO, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(lblODraw, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -551,7 +551,6 @@ public class OXFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel DrawLoseO;
     private javax.swing.JLabel PlayerO;
     private javax.swing.JLabel PlayerX;
     private javax.swing.JButton btn1;
@@ -573,14 +572,15 @@ public class OXFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JLabel lblODraw;
+    private javax.swing.JLabel lblOLose;
+    private javax.swing.JLabel lblOWin;
     private javax.swing.JLabel lblStatus;
+    private javax.swing.JLabel lblXDraw;
+    private javax.swing.JLabel lblXLose;
+    private javax.swing.JLabel lblXWin;
     private javax.swing.JLabel loseO;
     private javax.swing.JLabel loseX;
-    private javax.swing.JLabel nDrawX;
-    private javax.swing.JLabel nLoseX;
-    private javax.swing.JLabel nLosseO;
-    private javax.swing.JLabel nWinO;
-    private javax.swing.JLabel nWinX;
     private javax.swing.JLabel winO;
     private javax.swing.JLabel winX;
     // End of variables declaration//GEN-END:variables

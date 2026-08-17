@@ -273,9 +273,9 @@
                               </Group>
                               <EmptySpace max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="nWinX" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="nLoseX" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="nDrawX" max="-2" attributes="0"/>
+                                  <Component id="lblXWin" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="lblXLose" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="lblXDraw" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -297,11 +297,11 @@
                               <Component id="drawX" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
-                              <Component id="nWinX" max="-2" attributes="0"/>
+                              <Component id="lblXWin" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="nLoseX" max="-2" attributes="0"/>
+                              <Component id="lblXLose" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="nDrawX" max="-2" attributes="0"/>
+                              <Component id="lblXDraw" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
@@ -355,7 +355,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="nWinX">
+            <Component class="javax.swing.JLabel" name="lblXWin">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="14" style="0"/>
@@ -367,7 +367,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="nLoseX">
+            <Component class="javax.swing.JLabel" name="lblXLose">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="14" style="0"/>
@@ -379,7 +379,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="nDrawX">
+            <Component class="javax.swing.JLabel" name="lblXDraw">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="14" style="0"/>
@@ -410,9 +410,9 @@
                               </Group>
                               <EmptySpace max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="nWinO" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="nLosseO" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="DrawLoseO" alignment="0" max="-2" attributes="0"/>
+                                  <Component id="lblOWin" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="lblOLose" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="lblODraw" alignment="0" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -434,11 +434,11 @@
                               <Component id="drawO" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="nWinO" max="-2" attributes="0"/>
+                              <Component id="lblOWin" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="nLosseO" max="-2" attributes="0"/>
+                              <Component id="lblOLose" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="DrawLoseO" max="-2" attributes="0"/>
+                              <Component id="lblODraw" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
@@ -492,7 +492,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="nWinO">
+            <Component class="javax.swing.JLabel" name="lblOWin">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="14" style="0"/>
@@ -504,7 +504,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="nLosseO">
+            <Component class="javax.swing.JLabel" name="lblOLose">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="14" style="0"/>
@@ -516,7 +516,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="DrawLoseO">
+            <Component class="javax.swing.JLabel" name="lblODraw">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="14" style="0"/>
