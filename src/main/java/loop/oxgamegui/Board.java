@@ -69,6 +69,22 @@ public class Board {
         }
         return false;
     }
+    
+    public boolean checkDraw() {
+        int n = 0;
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3;j++) {
+                if (table[i][j] != '-'){
+                    n++;
+                }
+            }
+        }
+        if (n == 9 && !checkWin()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
     public boolean checkRowCol(int row, int col) {
         if (table[row - 1][col - 1] == '-') {

@@ -482,7 +482,9 @@ public class OXFrame extends javax.swing.JFrame {
         showBoard();
         if (board.checkWin()) {
             showWin();
-        } else {
+        } else if (board.checkDraw()) {
+            showDraw();
+        }else {
             board.switchPlayer();
             showTurn();
         } 
