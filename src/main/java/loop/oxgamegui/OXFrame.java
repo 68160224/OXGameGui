@@ -480,10 +480,9 @@ public class OXFrame extends javax.swing.JFrame {
     private void play(int row, int col) {
         try {
             board.setRowCol(row, col);
-        } catch (Exception ex) {
+        } catch (IllegalStateException ex) {
             return;
-        }
-        
+        }        
         showBoard();
         if (board.checkWin()) {
             showWin();
@@ -497,12 +496,25 @@ public class OXFrame extends javax.swing.JFrame {
     
     private void showWin(){
         lblStatus.setText(board.getCurrentPlayer().getName() + " Win!!!");
+        setEnableBoard(false);
     }
     
     private void showDraw() {
         lblStatus.setText("Draw!");
+        setEnableBoard(false);
     }
-
+    
+    private void setEnableBoard(boolean isEnable) {
+        btn1.setEnabled(isEnable);
+        btn2.setEnabled(isEnable);
+        btn3.setEnabled(isEnable);
+        btn4.setEnabled(isEnable);
+        btn5.setEnabled(isEnable);
+        btn6.setEnabled(isEnable);
+        btn7.setEnabled(isEnable);
+        btn8.setEnabled(isEnable);
+        btn9.setEnabled(isEnable);
+    }
 
     /**
      * @param args the command line arguments

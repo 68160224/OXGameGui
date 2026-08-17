@@ -32,7 +32,6 @@ public class Board {
         } else {
             throw new IllegalStateException("Spot taken");
         }
-        
     }
 
     public Player getCurrentPlayer() {
