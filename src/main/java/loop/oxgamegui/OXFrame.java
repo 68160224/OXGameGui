@@ -493,6 +493,10 @@ public class OXFrame extends javax.swing.JFrame {
     private void showWin(){
         lblStatus.setText(board.getCurrentPlayer().getName() + " Win!!!");
     }
+    
+    private void showDraw() {
+        lblStatus.setText("Draw!");
+    }
 
 
     /**
