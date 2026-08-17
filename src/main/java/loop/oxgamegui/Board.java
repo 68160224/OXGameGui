@@ -26,8 +26,14 @@ public class Board {
         return table;
     }
 
-    public void setRowCol(int row, int col) {
-        this.table[row - 1][col - 1] = currentPlayer.getName();
+    public boolean setRowCol(int row, int col) {
+        if (checkRowCol(row, col)){
+            this.table[row - 1][col - 1] = currentPlayer.getName();
+            return true;
+        } else {
+            return false;
+        }
+        
     }
 
     public Player getCurrentPlayer() {
